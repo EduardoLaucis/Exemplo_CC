@@ -14,16 +14,39 @@ Este repositório demonstra o uso do Claude Code como ferramenta de desenvolvime
 
 - Claude Code (CLI)
 - Git / GitHub
+- Python 3 / Django
 
 ## Como usar
 
 ```bash
 # Clone o repositório
 git clone https://github.com/EduardoLaucis/Exemplo_CC.git
-
-# Acesse o diretório
 cd Exemplo_CC
+
+# Crie e ative um ambiente virtual
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# Linux/Mac
+source venv/bin/activate
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Aplique as migrações
+python manage.py migrate
+
+# Rode o servidor de desenvolvimento
+python manage.py runserver
 ```
+
+Acesse `http://127.0.0.1:8000/` para ver a página inicial.
+
+## Estrutura
+
+- `manage.py` — utilitário do Django
+- `exemplo_cc/` — configurações do projeto (settings, urls, wsgi)
+- `ola/` — app simples com uma view "Olá, mundo!"
 
 ## Licença
 
